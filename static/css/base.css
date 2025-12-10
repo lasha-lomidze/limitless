@@ -1,0 +1,36 @@
+body {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    /* background: linear-gradient(to bottom, black, hsl(54deg, 97%, 7%)); */
+    background-color: rgb(14, 14, 14);
+    /* background: radial-gradient(black, hsl(0, 0%, 7%)); */
+
+    min-height: 200vh;
+    color: rgb(231, 231, 231);
+}
+
+.navbar {
+    background: linear-gradient(to bottom, rgb(0, 0, 0), transparent);
+}
+
+
+.navbar-brand {
+    color: rgb(231, 231, 231);
+}
+
+.navbar-brand:hover {
+    color: hsl(54deg, 97%, 53%);
+}
+
+.hero {
+    min-height: 1000px;
+}
+
+.title {
+    font-size: 9rem;
+    color: rgb(255, 255, 255);
+    text-shadow: 7px 7px black;
+}
+
+/* .hero svg {
+    opacity: 0.6;
+} */

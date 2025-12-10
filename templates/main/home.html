@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>
+    <div class="hero d-flex flex-column justify-content-center align-items-center">
+        <div class="position-absolute w-100" style="z-index: -100;">{% include 'includes/logo.html' %}</div>
+        <h1 class="title text-center text-capitalize z-2">Limitless</h1>
+    </div>
+    <main class="">
+        <a href="{{ url_for('direction_game') }}">
+            <i class="bi bi-arrows-move"></i>
+            direction game
+        </a>
+        <a href="{{ url_for('reaction_game') }}">reactioin game</a>
+    </main>
+</div>
+{% endblock %}
