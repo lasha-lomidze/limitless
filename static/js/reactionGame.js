@@ -22,7 +22,7 @@ const won = () => {
     console.log(`User reaction time: ${reactionTimeMs} ms`);
 }
 
-document.addEventListener('DOMContentLoaded', async () => {
+window.addEventListener('load', async () => {
 
     clickMe.textContent = 'Wait for Green...';
     clickMe.classList.add('bg-danger');

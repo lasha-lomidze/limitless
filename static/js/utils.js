@@ -69,6 +69,15 @@ export const arrRandom = (arr) => {
     return { el: arr[index], index };
 }
 
+export const readySetGo = async (htmlEl, ms = 500) => {
+    htmlEl.textContent = "Ready?";
+    await sleep(ms);
+    htmlEl.textContent = "Set...";
+    await sleep(ms);
+    htmlEl.textContent = "GO!";
+    await sleep(ms);
+}
+
 
 // export const accurateSetTimeout = async (ms) => {
 //     const start = performance.now();

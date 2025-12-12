@@ -1,5 +1,5 @@
 
-import { arrRandom, sleep, startCountdown } from "./utils.js";
+import { arrRandom, sleep, startCountdown, readySetGo } from "./utils.js";
 
 const scoreDisplayEl = document.getElementById('score-display');
 const arrowDisplayEl = document.getElementById('arrow-display');
@@ -25,13 +25,8 @@ let curArrow = "";
 let score = 0;
 let isInputEnabled = false;
 
-document.addEventListener('DOMContentLoaded', async () => {
-    arrowDisplayEl.textContent = "Ready?";
-    await sleep(500);
-    arrowDisplayEl.textContent = "Set...";
-    await sleep(500);
-    arrowDisplayEl.textContent = "GO!";
-    await sleep(500);
+window.addEventListener('load', async () => {
+    await readySetGo(arrowDisplayEl);
     startCountdown(timer, 30000)
     isInputEnabled = true;
     curArrow = showNewArrow(arrowDisplayEl);

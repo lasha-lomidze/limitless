@@ -1,0 +1,11 @@
+{% extends "game-base.html" %}
+
+{% block game_content %}
+<h1 id="number-display"></h1>
+<h1 id="number-memory-timer"></h1>
+<h1 id="score-display"></h1>
+{% endblock %}
+
+{% block scripts %}
+<script type="module" src="{{ url_for('static', filename='js/numberMemoryGame.js')}}"></script>
+{% endblock %}

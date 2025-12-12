@@ -3,15 +3,46 @@
 {% block content %}
 <div>
     <div class="hero d-flex flex-column justify-content-center align-items-center">
-        <div class="position-absolute w-100" style="z-index: -100;">{% include 'includes/logo.html' %}</div>
+        <div class="position-absolute " style="z-index: -100;">{% include 'includes/logo.html' %}</div>
         <h1 class="title text-center text-capitalize z-2">Limitless</h1>
     </div>
+    {% include '/includes/seperator.html' %}
     <main class="">
-        <a href="{{ url_for('direction_game') }}">
+        <!-- <a href="{{ url_for('direction_game') }}">
             <i class="bi bi-arrows-move"></i>
             direction game
         </a>
-        <a href="{{ url_for('reaction_game') }}">reactioin game</a>
+        <a href="{{ url_for('reaction_game') }}">reactioin game</a> -->
+        <a href="{{ url_for('direction_game') }}">
+            <div class="game">
+                <i class="bi bi-arrows-move"></i>
+                <h4>Direction Game</h4>
+            </div>
+        </a>
+        <a href="{{ url_for('reaction_game') }}">
+            <div class="game">
+                <i class="bi bi-lightning-fill"></i>
+                <h4>Reaction Game</h4>
+            </div>
+        </a>
+        <a href="{{ url_for('aim_game') }}">
+            <div class="game">
+                <i class="bi bi-bullseye"></i>
+                <h4>Aim Trainer</h4>
+            </div>
+        </a>
+        <a href="{{ url_for('number_memory_game') }}">
+            <div class="game">
+                <i class="bi bi-123"></i>
+                <h4>Number Memory</h4>
+            </div>
+        </a>
+        <a>
+            <div class="game disabled">
+                <i class="bi bi-eye "></i>
+                <h4>Dot estimation</h4>
+            </div>
+        </a>
     </main>
 </div>
 {% endblock %}

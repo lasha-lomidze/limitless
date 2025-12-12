@@ -22,13 +22,25 @@ def signup():
 def login():
     return render_template('auth/login.html')
 
-@app.route('/direction-game')
+@app.route('/direction')
 def direction_game():
-    return render_template('games/direction-game.html')
+    return render_template('games/direction.html')
 
-@app.route('/reaction-game')
+@app.route('/reaction')
 def reaction_game():
-    return render_template('games/reaction-game.html')
+    return render_template('games/reaction.html')
+
+@app.route('/aim')
+def aim_game():
+    return render_template('games/aim.html') 
+
+@app.route('/dot-estimation')
+def dot_estimation_game():
+    return render_template('games/dot-estimation.html')
+
+@app.route('/number-memory')
+def number_memory_game():
+    return render_template('games/number-memory.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
@@ -38,10 +50,8 @@ if __name__ == "__main__":
 # ^ Reaction Time: one time based
 # 2. Sequence Memory Test
 #    Scoring: highest sequence length reached before a mistake
-# 3. Aim Trainer
-#    Scoring: total targets hit in 30s and accuracy %
-#    Final score = hits * accuracy
-# 4. Number Memory
+# ^ Aim Trainer: Scoring: total targets hit in 30s and accuracy %
+# ? 4. Number Memory
 #    Scoring: longest number correctly recalled
 # 5. Verbal Memory
 #    Scoring: total correct “seen/unseen” decisions before 3 mistakes

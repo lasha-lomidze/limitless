@@ -1,0 +1,11 @@
+{% extends "game-base.html" %}
+
+{% block game_content %}
+<div id="aim-area" class="w-75 h-75 position-relative">
+    <div id="target" class="position-absolute rounded-circle bg-danger"></div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script type="module" src="{{ url_for('static', filename='js/aimGame.js')}}"></script>
+{% endblock %}
