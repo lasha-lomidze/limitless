@@ -8,30 +8,25 @@
     </div>
     {% include '/includes/seperator.html' %}
     <main class="">
-        <!-- <a href="{{ url_for('direction_game') }}">
-            <i class="bi bi-arrows-move"></i>
-            direction game
-        </a>
-        <a href="{{ url_for('reaction_game') }}">reactioin game</a> -->
-        <a href="{{ url_for('direction_game') }}">
+        <a href="{{ url_for('games.direction_game') }}">
             <div class="game">
                 <i class="bi bi-arrows-move"></i>
                 <h4>Direction Game</h4>
             </div>
         </a>
-        <a href="{{ url_for('reaction_game') }}">
+        <a href="{{ url_for('games.reaction_game') }}">
             <div class="game">
                 <i class="bi bi-lightning-fill"></i>
                 <h4>Reaction Game</h4>
             </div>
         </a>
-        <a href="{{ url_for('aim_game') }}">
+        <a href="{{ url_for('games.aim_game') }}">
             <div class="game">
                 <i class="bi bi-bullseye"></i>
                 <h4>Aim Trainer</h4>
             </div>
         </a>
-        <a href="{{ url_for('number_memory_game') }}">
+        <a href="{{ url_for('games.number_memory_game') }}">
             <div class="game">
                 <i class="bi bi-123"></i>
                 <h4>Number Memory</h4>

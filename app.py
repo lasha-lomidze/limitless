@@ -1,46 +1,11 @@
 from flask import Flask, render_template
+from routes import auth_bp, game_bp, main_bp   
 
 app = Flask(__name__)
 
-@app.route('/')
-def index():
-    return render_template('main/home.html')
-
-@app.route('/leaderboard')
-def leaderboard():
-    return render_template('main/leaderboard.html')
-
-@app.route('/dashboard')
-def dashboard():
-    return render_template('main/dashboard.html')
-
-@app.route('/signup')
-def signup():
-    return render_template('auth/signup.html')
-
-@app.route('/login')
-def login():
-    return render_template('auth/login.html')
-
-@app.route('/direction')
-def direction_game():
-    return render_template('games/direction.html')
-
-@app.route('/reaction')
-def reaction_game():
-    return render_template('games/reaction.html')
-
-@app.route('/aim')
-def aim_game():
-    return render_template('games/aim.html') 
-
-@app.route('/dot-estimation')
-def dot_estimation_game():
-    return render_template('games/dot-estimation.html')
-
-@app.route('/number-memory')
-def number_memory_game():
-    return render_template('games/number-memory.html')
+app.register_blueprint(main_bp)
+app.register_blueprint(auth_bp)
+app.register_blueprint(game_bp) 
 
 if __name__ == "__main__":
     app.run(debug=True)
