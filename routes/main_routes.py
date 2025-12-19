@@ -13,3 +13,9 @@ def leaderboard():
 @main_bp.route('/dashboard')
 def dashboard():
     return render_template('main/dashboard.html')
+
+
+"""
+rank by popularity / hard of use
+leaderboard also by mobile vs desktop
+"""

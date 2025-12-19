@@ -1,0 +1,18 @@
+{% extends "game-base.html" %}
+
+{% block game_content %}
+<div class="container text-center mt-3">
+    <h2>Sound Localization Game</h2>
+    <p>Move your cursor to find the hidden sound!</p>
+
+    <div id="ready-set-go" class="fs-3 my-3"></div>
+    <div id="round-info" class="position-absolute top-0 end-0 m-2 p-2 rounded shadow">
+        Round: 0 / 5<br>
+        Score: 0
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script type="module" src="{{ url_for('static', filename='js/soundLocalizationGame.js')}}"></script>
+{% endblock %}
