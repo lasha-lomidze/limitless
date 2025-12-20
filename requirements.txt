@@ -8,3 +8,48 @@ MarkupSafe==3.0.3
 SQLAlchemy==2.0.44
 typing_extensions==4.15.0
 Werkzeug==3.1.4
+
+
+
+        # <a href="{{ url_for('games.direction_game') }}">
+        #     <div class="game">
+        #         <i class="bi bi-arrows-move"></i>
+        #         <h4>Direction Game</h4>
+        #     </div>
+        # </a>
+        # <a href="{{ url_for('games.reaction_game') }}">
+        #     <div class="game">
+        #         <i class="bi bi-lightning-fill"></i>
+        #         <h4>Reaction Game</h4>
+        #     </div>
+        # </a>
+        # <a href="{{ url_for('games.aim_game') }}">
+        #     <div class="game">
+        #         <i class="bi bi-bullseye"></i>
+        #         <h4>Aim Trainer</h4>
+        #     </div>
+        # </a>
+        # <a href="{{ url_for('games.number_memory_game') }}">
+        #     <div class="game">
+        #         <i class="bi bi-123"></i>
+        #         <h4>Number Memory</h4>
+        #     </div>
+        # </a>
+        # <a>
+        #     <div class="game disabled">
+        #         <i class="bi bi-eye "></i>
+        #         <h4>Dot Estimation</h4>
+        #     </div>
+        # </a>
+        # <a href="{{ url_for('games.sound_localization_game') }}">
+        #     <div class="game">
+        #         <i class="bi bi-volume-up-fill"></i>
+        #         <h4>Sound Localization</h4>
+        #     </div>
+        # </a>
+        # <a href="{{ url_for('games.typing_speed_game') }}">
+        #     <div class="game">
+        #         <i class="bi bi-type"></i>
+        #         <h4>Typing Speed</h4>
+        #     </div>
+        # </a>

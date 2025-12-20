@@ -9,3 +9,7 @@
     {% block game_content %}{% endblock %}
 </div>
 {% endblock %}
+
+{% block scripts %}
+<script type="module" src="{{ url_for('static', filename='js/games/' + game.id + '.js') }}"></script>
+{% endblock %}

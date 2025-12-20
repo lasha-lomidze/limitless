@@ -7,43 +7,19 @@
         <h1 class="title text-center text-capitalize z-2">Limitless</h1>
     </div>
     {% include '/includes/seperator.html' %}
-    <main class="">
-        <a href="{{ url_for('games.direction_game') }}">
-            <div class="game">
-                <i class="bi bi-arrows-move"></i>
-                <h4>Direction Game</h4>
-            </div>
-        </a>
-        <a href="{{ url_for('games.reaction_game') }}">
-            <div class="game">
-                <i class="bi bi-lightning-fill"></i>
-                <h4>Reaction Game</h4>
-            </div>
-        </a>
-        <a href="{{ url_for('games.aim_game') }}">
-            <div class="game">
-                <i class="bi bi-bullseye"></i>
-                <h4>Aim Trainer</h4>
-            </div>
-        </a>
-        <a href="{{ url_for('games.number_memory_game') }}">
-            <div class="game">
-                <i class="bi bi-123"></i>
-                <h4>Number Memory</h4>
-            </div>
-        </a>
-        <a>
-            <div class="game disabled">
-                <i class="bi bi-eye "></i>
-                <h4>Dot Estimation</h4>
-            </div>
-        </a>
-        <a href="{{ url_for('games.sound_localization_game') }}">
-            <div class="game">
-                <i class="bi bi-volume-up-fill"></i>
-                <h4>Sound Localization</h4>
-            </div>
-        </a>
+    <main>
+        <ul class="games-list d-flex flex-wrap justify-content-center gap-4 p-4 list-unstyled">
+            {% for game in games %}
+            <li>
+                <a href="{{ url_for('games.game_page', game_id=game.id) }}">
+                    <div class="game">
+                        <i class="{{ game.icon }}"></i>
+                        <h4>{{ game.name }}</h4>
+                    </div>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
     </main>
 </div>
 {% endblock %}

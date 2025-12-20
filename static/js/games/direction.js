@@ -1,5 +1,5 @@
 
-import { arrRandom, sleep, startCountdown, readySetGo } from "./utils.js";
+import { arrRandom, sleep, startCountdown, readySetGo } from "../utils.js";
 
 const scoreDisplayEl = document.getElementById('score-display');
 const arrowDisplayEl = document.getElementById('arrow-display');

@@ -1,5 +1,5 @@
 
-import { readySetGo } from "./utils.js";
+import { readySetGo } from "../utils.js";
 
 const aimTrainerArea = document.getElementById('aim-area');
 

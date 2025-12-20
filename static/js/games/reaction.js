@@ -1,4 +1,4 @@
-import { random, sleep } from "./utils.js";
+import { random, sleep } from "../utils.js";
 
 const clickMe = document.getElementById('click-me');
 

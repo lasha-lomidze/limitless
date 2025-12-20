@@ -1,37 +1,54 @@
 from flask import Blueprint, render_template
+from config import GAMES_DATA
 
 game_bp = Blueprint("games", __name__, url_prefix='/games')
 
-@game_bp.route('/direction')
-def direction_game():
-    return render_template('games/direction.html')
+@game_bp.route('/<game_id>')
+def game_page(game_id): 
+    game = next((g for g in GAMES_DATA if g["id"] == game_id), None)
+    if not game:
+        return "Game not found", 404
+    return render_template(f'games/{game_id}.html', game=game)
 
-@game_bp.route('/reaction')
-def reaction_game():
-    return render_template('games/reaction.html')
 
-@game_bp.route('/aim')
-def aim_game():
-    return render_template('games/aim.html') 
 
-@game_bp.route('/dot-estimation')
-def dot_estimation_game():
-    return render_template('games/dot-estimation.html')
 
-@game_bp.route('/number-memory')
-def number_memory_game():
-    return render_template('games/number-memory.html')
 
-@game_bp.route('/sound-localization')
-def sound_localization_game():
-    return render_template('games/sound-localization.html')
+
+# @game_bp.route('/direction')
+# def direction_game():
+#     return render_template('games/direction.html')
+
+# @game_bp.route('/reaction')
+# def reaction_game():
+#     return render_template('games/reaction.html')
+
+# @game_bp.route('/aim')
+# def aim_game():
+#     return render_template('games/aim.html') 
+
+# @game_bp.route('/dot-estimation')
+# def dot_estimation_game():
+#     return render_template('games/dot-estimation.html')
+
+# @game_bp.route('/number-memory')
+# def number_memory_game():
+#     return render_template('games/number-memory.html')
+
+# @game_bp.route('/sound-localization')
+# def sound_localization_game():
+#     return render_template('games/sound-localization.html')
+
+# @game_bp.route('/typing-speed')
+# def typing_speed_game():
+#     return render_template('games/typing-speed.html')
 
 """
 # ^ Reaction Time: one time based
 # 2. Sequence Memory Test
 #    Scoring: highest sequence length reached before a mistake
 # ^ Aim Trainer: Scoring: total targets hit in 30s and accuracy %
-# ? 4. Number Memory: Scoring: longest number correctly recalled
+# ^ Number Memory: Scoring: longest number correctly recalled
 # 5. Verbal Memory
 #    Scoring: total correct “seen/unseen” decisions before 3 mistakes
 # 6. Chimp Test
@@ -58,8 +75,7 @@ def sound_localization_game():
 #     Scoring: longest streak of correct identifications
 # 17. Rhythm Reproduction (tap spacebar to reproduce rhythm)
 #     Scoring: similarity score (0–100) based on timing deviation from the pattern
-# 18. Sound Localization (audio plays → left or right?)
-#     Scoring: percentage of correct responses
+# ^ Sound Localization (audio plays → left or right?)
 # 19. Continuous Performance Test (press only when “X” appears)
 #     Scoring: hits - false alarms
 # 20. Probability Guess (spinner or probability wheel → guess percentage)

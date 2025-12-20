@@ -1,4 +1,4 @@
-import { readySetGo } from './utils.js';
+import { readySetGo } from '../utils.js';
 
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 const oscillator = audioCtx.createOscillator();
