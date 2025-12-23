@@ -14,35 +14,6 @@ def game_page(game_id):
 
 
 
-
-# @game_bp.route('/direction')
-# def direction_game():
-#     return render_template('games/direction.html')
-
-# @game_bp.route('/reaction')
-# def reaction_game():
-#     return render_template('games/reaction.html')
-
-# @game_bp.route('/aim')
-# def aim_game():
-#     return render_template('games/aim.html') 
-
-# @game_bp.route('/dot-estimation')
-# def dot_estimation_game():
-#     return render_template('games/dot-estimation.html')
-
-# @game_bp.route('/number-memory')
-# def number_memory_game():
-#     return render_template('games/number-memory.html')
-
-# @game_bp.route('/sound-localization')
-# def sound_localization_game():
-#     return render_template('games/sound-localization.html')
-
-# @game_bp.route('/typing-speed')
-# def typing_speed_game():
-#     return render_template('games/typing-speed.html')
-
 """
 # ^ Reaction Time: one time based
 # 2. Sequence Memory Test

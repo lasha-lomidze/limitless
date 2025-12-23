@@ -10,3 +10,4 @@ venv/
 site.db
 *.sqlite
 *.sqlite3
+.env
